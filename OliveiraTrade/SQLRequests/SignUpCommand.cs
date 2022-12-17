@@ -15,7 +15,6 @@ namespace OliveiraTrade.SQLRequests
 
         public String DatabaseSignUpRequest(String usuario, String password, long cpf, String email)
         {
-
             sqlCmd.CommandText = "INSERT INTO USERSTABLE VALUES (@USERID, @PASSWORD, @CPF, @EMAIL);";
             sqlCmd.Parameters.AddWithValue("@USERID", usuario);
             sqlCmd.Parameters.AddWithValue("@PASSWORD", password);

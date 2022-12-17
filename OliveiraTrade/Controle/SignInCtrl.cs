@@ -21,14 +21,12 @@ namespace OliveiraTrade.Controle
             if      (username.Length > 50)  {throw new UserIdLenghExceededExeption();}
             else if (password.Length > 50)  {throw new PasswLenghExceededExeption();}
 
-            else
-            {
+            else{
                 SignInCommand serverSignin = new SignInCommand();
 
                 hasAccount = serverSignin.DatabaseSigninVerifRequest(username, password);
 
-                if (!serverSignin.Message.Equals(""))
-                {
+                if (!serverSignin.Message.Equals("")){
                     this.sqlErrorTxt = serverSignin.Message;
                 }
 

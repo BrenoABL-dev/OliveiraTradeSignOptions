@@ -17,21 +17,20 @@ namespace OliveiraTrade.SQLRequests
         SqlDataReader   dataReader;
 
         private bool    accExists = false;
-        public bool     AccExists {        get { return accExists; }
-                                private set { accExists = value;}}
+        public bool     AccExists {         get { return accExists; }
+                                    private set { accExists = value;}}
 
         #endregion
 
 
 
         public bool DatabaseSigninVerifRequest(String userID, String password)
-        {
+{
             sqlCmd.CommandText = "SELECT * FROM USERSTABLE WHERE userID = @userID AND password = @password";
             sqlCmd.Parameters.AddWithValue("@userID", userID);
             sqlCmd.Parameters.AddWithValue("@password", password);
 
-            try
-            {
+            try{
                 sqlCmd.Connection = databaseCon.Connect();
                 dataReader =        sqlCmd.ExecuteReader();
 
