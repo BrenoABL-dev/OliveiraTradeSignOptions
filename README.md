@@ -2,6 +2,8 @@
 Projeto em c# no Visual Studio 2022. Desenvolvido para o Teste Prático para Desenvovledor
 para o Programa Best Minds 2022/2023 - Pessoa Desenvolvedora Trainee pela Everymind
 
+O banco de dados na nuvem da AWS foi desabilitado, conecte seu banco de dados ou me contacte caso queira testar este programa
+
 O Usuário pode entrar com uma conta já feita, guardada em uma base de dados da AWS, ou fazer um registro novo.
 Os valores entrados pelo usuário passam por uma verificação básica pelo SignInCtrl
   depois são enviados para SignInCommand, onde é enviando um pedido para o banco de dados
